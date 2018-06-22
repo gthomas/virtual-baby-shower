@@ -4,7 +4,6 @@ from django.http import HttpResponseForbidden, HttpResponseNotAllowed, JsonRespo
 
 
 # Create your views here.
-
 def guests_only(function):
     def wraps(request, *args, **kwargs):
         if request.user.is_logged_in:

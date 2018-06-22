@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "07d84da0f9692d353a96cb1c7eb37b4b824e71fc0147547587dfaae9af02deb1"
+            "sha256": "a36688a8880c01d1e29c2c56d20260f222160be7cc8b22c513d3b1b33adf1b92"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,6 +47,14 @@
             "index": "pypi",
             "version": "==1.4"
         },
+        "django-spa": {
+            "hashes": [
+                "sha256:04ea7876ae734a338f0839b4e1b6d3ded90a6c566c62375845a8bd74ce6e6ed3",
+                "sha256:f97ced17b7afafb8d29ba9aebe3e3c2b0970133f2e48c3a952f854a0d77f4359"
+            ],
+            "index": "pypi",
+            "version": "==0.2.0"
+        },
         "psycopg2": {
             "hashes": [
                 "sha256:0f4c784e1b5a320efb434c66a50b8dd7e30a7dc047e8f45c0a8d2694bfe72781",
@@ -88,10 +96,11 @@
         },
         "whitenoise": {
             "hashes": [
-                "sha256:15f43b2e701821b95c9016cf469d29e2a546cb1c7dead584ba82c36f843995cf",
-                "sha256:9d81515f2b5b27051910996e1e860b1332e354d9e7bcf30c98f21dcb6713e0dd"
+                "sha256:90a576ecb938cfef3fd1dba0c82d10e8e9ff0acb6079d7edba64822db0e4384d",
+                "sha256:e4c77cdde3f7a1cd2c1d985d6a3d7dc8aff5f3d18c2f331e7171933aacaeb440"
             ],
-            "version": "==3.3.1"
+            "index": "pypi",
+            "version": "==3.2.2"
         }
     },
     "develop": {}
