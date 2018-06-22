@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from shower.answers import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('questions/', views.questions, name='question-list'),
+    path('questions/<int:question_id>/', views.question_detail, name='question-detail'),
+    path('questions/<int:question_id>/answers/', views.answers, name='answers-list'),
+    path('questions/<int:question_id>/answers/mine/', views.my_answer, name='answers-list')
 ]
