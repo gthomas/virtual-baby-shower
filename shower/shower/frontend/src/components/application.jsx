@@ -14,7 +14,7 @@ class Application extends React.Component {
         const {application} = this.props;
         return (
             <div id="application-component">
-                <h1>{name} v{version}</h1>
+                <h1>poop</h1>
                 <p>Loading: {`${application.loading}`}</p>
             </div>
         );
@@ -22,3 +22,4 @@ class Application extends React.Component {
 }
 
 export default Application;
+g

@@ -6,20 +6,31 @@ class Question(models.Model):
     text = models.TextField()
 
     def to_dict(self):
-        pass
-
-    def from_dict(self):
-        pass
+        data = {
+            'text': self.text,
+        }
+        return data
 
 class Answer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    answer = models.TextField()
     user = models.ManyToManyField(User)
 
     def to_dict(self):
-        pass
+        data = {
+            'user': self.user.id,
+            'question': self.question.text,
+            'answer': self.answer
+        }
+        return data
 
-    def from_dict(self):
-        pass
+    @classmethod
+    def from_dict(cls, data):
+        answer_id = data.get('pk', None)
+        if answer_id:
+            answer = Answer.objects.get(pk=answer_id)
+        else:
+            answer = Answer.objects.create()
 
 class Donation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -27,7 +38,17 @@ class Donation(models.Model):
     amount = models.DecimalField(decimal_places=2, max_digits=6)
 
     def to_dict(self):
-        pass
+        data = {
+            'user': self.user.pk,
+            'note': self.note,
+            'amount': self.amount
+        }
+        return data
 
-    def from_dict(self):
-        pass
+    @classmethod
+    def from_dict(cls, data):
+        donation = Donation.objects.create()
+        donation.user = data.user_id
+        note = data.note
+        amount = data.amount
+        return donation

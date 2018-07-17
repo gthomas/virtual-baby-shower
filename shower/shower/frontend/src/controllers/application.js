@@ -6,6 +6,9 @@ class ApplicationController {
     @action loading(isloading = true) {
         application.loading = isloading;
     }
+
 }
 
 export default new ApplicationController();
+
+
